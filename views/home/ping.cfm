@@ -1,0 +1,1 @@
+<cfoutput><h1>home.ping</h1></cfoutput>
