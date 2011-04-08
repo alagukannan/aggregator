@@ -25,6 +25,7 @@ Add the following Module route to the routes.cfm file:
 	addModuleRoutes(pattern="/aggregator",module="aggregator");
 Configure Logbox in your coldbox config if you need to log info logged by the module.
 Secure the Admin module handler (aggregator:admin.*) using your security interceptor.
+URLs if App is running in root.
 Admin URL: http://localhost/aggregator/admin
 Aggregator Home page: http://localhost/aggregator/
 
