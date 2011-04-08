@@ -91,6 +91,7 @@ component {
 			{pattern="/faq", handler="home",action="faq"},
 			{pattern="/list", handler="home",action="list"},
 			{pattern="/ping", handler="home",action="ping"},
+                        {pattern="/admin", handler="admin",action="index"},
 			{pattern="/search", handler="home",action="search"},
 			{pattern="/:handler/:action?"}
 		];		
