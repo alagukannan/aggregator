@@ -104,7 +104,7 @@ link = The link to use for paging, including a placeholder for the page @page@
 				maxRows = arguments.pagingMaxRows;
 			}
 						
-			boundaries.startrow = (event.getValue("page",1) * maxrows - maxRows)+1;
+			boundaries.startrow = (event.getValue("page",1) * maxrows - maxRows);
 			boundaries.maxrow = boundaries.startrow + maxRows - 1;
 		
 			return boundaries;

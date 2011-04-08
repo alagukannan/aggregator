@@ -49,7 +49,6 @@ component extends="baseHandler"{
 			var prc = event.getCollection(private = true);
 			prc.title = 'FAQ - Aggregator Module';
 			prc.eventLink = '#event.buildlink(linkto='#event.getCurrentModule()#/faq')#';
-			addAsset("#event.getModuleRoot()#/includes/scripts/aggregator.js");
 	}
 	function index(event) cache=true cachetimeout=15 cacheLastAccesstimeout=15{
 		var rc = event.getCollection();
