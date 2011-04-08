@@ -1,0 +1,38 @@
+Basic Requirements:
+	Coldfusion 9.0.1
+	Coldbox 3.00
+	Microsoft SQL Server. I haven't tried it with other DB but since it uses Hibernate it should work
+	with other DB as well. 
+	ORM Enabled coldbox 3.00 application.
+	SES Interceptor enabled.
+
+Installation Instruction:
+Grab the Aggregator Module and place it in the Modules Directory.
+Enable ORM with data source and set the cfc locations.
+ e.g:
+ 	<cfscript>
+		this.datasource = 'datasource name';
+		this.ormEnabled = true;
+		this.ormSettings	  = {
+			cfclocation	= "modules/aggregator/model", // orm model location
+			dbcreate 	= "update",
+			flushatrequestend = false
+		};
+	</cfscript>	
+Enable coldbox event and handler caching settings.
+Enable SES interceptor if not enabled since this app requires SES enabled.
+Add the following Module route to the routes.cfm file:
+	addModuleRoutes(pattern="/aggregator",module="aggregator");
+Configure Logbox in your coldbox config if you need to log info logged by the module.
+Secure the Admin module handler (aggregator:admin.*) using your security interceptor.
+Admin URL: http://localhost/aggregator/admin
+Aggregator Home page: http://localhost/aggregator/
+
+
+
+	
+	
+
+	
+
+	
