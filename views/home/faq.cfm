@@ -44,7 +44,7 @@ The ping service would return a json string with hasError and message properties
 <div class="answer">
 <p><label>Where can I find the source?</label></p>
 <p>
-You can find the source from <a href="http://www.coldbox.org/forgebox/type/modules">Forgebox modules section</a> or from <a href="https://github.com/alagukannan/aggregator">github</a>.
+You can find the source from <a href="http://www.coldbox.org/forgebox/view/Aggregator">Forgebox modules section</a> or from <a href="https://github.com/alagukannan/aggregator">github</a>.
 </p>
 <a href="#prc.eventLink###top">Return to Top</a>
 </div>
