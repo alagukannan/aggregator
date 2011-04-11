@@ -41,7 +41,7 @@ Optional Methods
 
 */
 component {
-	
+
 	// Module Properties
 	this.title 				= "aggregator";
 	this.author 			= "AL";
@@ -54,36 +54,36 @@ component {
 	this.layoutParentLookup = false;
 	// Module Entry Point
 	this.entryPoint			= "aggregator.home.index";
-	
+
 	function configure(){
-		
+
 		// parent settings
 		parentSettings = {
-		
+
 		};
-	
+
 		// module settings - stored in modules.name.settings
 		settings = {
 			feedInfo = { description='A simple blog aggregator', title ='Coldbox Aggregator'},
 			PagingBandGap = 3,
 			PagingMaxRows = 10
 		};
-		
+
 		// Layout Settings
 		layoutSettings = {
 			defaultLayout = "aggregator.cfm"
 		};
-		
+
 		// datasources
 		datasources = {
-		
+
 		};
-		
+
 		// web services
 		webservices = {
-		
+
 		};
-		
+
 		// SES Routes
 		routes = [
 			{pattern="/:page-numeric?", handler="home",action="index"},
@@ -91,28 +91,27 @@ component {
 			{pattern="/faq", handler="home",action="faq"},
 			{pattern="/list", handler="home",action="list"},
 			{pattern="/ping", handler="home",action="ping"},
-                        {pattern="/admin", handler="admin",action="index"},
 			{pattern="/search", handler="home",action="search"},
 			{pattern="/:handler/:action?"}
-		];		
-		
+		];
+
 		// Custom Declared Points
 		interceptorSettings = {
 			customInterceptionPoints = ""
 		};
-		
+
 		// Custom Declared Interceptors
-		interceptors = [			
+		interceptors = [
 			// Transactional Hibernation annotations
 /*	 		{class="coldbox.system.orm.hibernate.transactionaspect",
-			 properties = {metadatacachereload=false}			
+			 properties = {metadatacachereload=false}
 			}*/
 		];
-		
+
 		// WireBox Binder configuration
 		binder.map("blogService@aggregator").to("#moduleMapping#.model.blogService").asSingleton();
 	}
-	
+
 	/**
 	* Fired when the module is registered and activated.
 	*/
@@ -122,7 +121,7 @@ component {
 		schedulerPlugin.create( taskname = 'ScheduledDailyCrawl@aggregator',url="#controller.getSetting('htmlbaseURL')##this.title#/schedule/dailyCrawl");
 		log.info('aggregator module started and ScheduledDailyCrawl@aggregator schedule task created in server');
 	}
-	
+
 	/**
 	* Fired when the module is unregistered and unloaded
 	*/
@@ -132,5 +131,5 @@ component {
 		schedulerPlugin.remove( taskname = 'ScheduledDailyCrawl@aggregator');
 		log.info('aggregator module unloaded and ScheduledDailyCrawl@aggregator schedule task removed from server');
 	}
-	
+
 }
