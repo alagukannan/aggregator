@@ -1,4 +1,5 @@
 Basic Requirements:
+	testing github
 	Coldfusion 9.0.1
 	Coldbox 3.00
 	Microsoft SQL Server. In case of Mysql remove the unique key constraints in the blogs and blogEntries model since its throwing an error when hibernate creates the constraints.
